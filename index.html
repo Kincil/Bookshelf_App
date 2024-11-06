@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+
+    <!-- Impor script kamu di sini -->
+    <!-- Lampirkan `defer` jika pemanggilan dilakukan dalam <head> -->
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Bookshelf App</h1>
+    </header>
+
+    <main class="wrapper">
+      <section class="container bg-white shadow">
+        <h2 class="container-header text-center">Tambah Buku Baru</h2>
+        <form id="bookForm" class="form" data-testid="bookForm">
+          <div class="form-group form-title">
+            <label for="bookFormTitle">Judul</label>
+            <input id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" />
+          </div>
+          <div class="form-group form-title">
+            <label for="bookFormAuthor">Penulis</label>
+            <input id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" />
+          </div>
+          <div class="form-group form-title">
+            <label for="bookFormYear">Tahun</label>
+            <input id="bookFormYear" type="number" required data-testid="bookFormYearInput" />
+          </div>
+          <div class="form-group form-title">
+            <label for="bookFormIsComplete">Selesai dibaca</label>
+            <input id="bookFormIsComplete" type="checkbox" data-testid="bookFormIsCompleteCheckbox" />
+          </div>
+          <button id="bookFormSubmit" class="btn-submit" type="submit" data-testid="bookFormSubmitButton">Masukkan Buku ke rak <span>Belum selesai dibaca</span></button>
+        </form>
+      </section>
+
+      <section class="container bg-white shadow">
+        <h2 class="container-header text-center">Cari Buku</h2>
+        <form id="searchBook" class="form-group form-title" data-testid="searchBookForm">
+          <label for="searchBookTitle">Judul</label>
+          <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" />
+          <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">Cari</button>
+        </form>
+      </section>
+
+      <section class="container">
+        <h2 class="container-header">Belum selesai dibaca</h2>
+        <div class="list-item" id="incompleteBookList" data-testid="incompleteBookList"></div>
+      </section>
+
+      <section class="container">
+        <h2 class="container-header">Selesai dibaca</h2>
+        <div class="list-item" id="completeBookList" data-testid="completeBookList"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created by <a href="https://www.instagram.com/mfilyan.s_/" target="_blank">Muhammad Filyan Syahril</a> &copy; 2024</p>
+    </footer>
+  </body>
+</html>
